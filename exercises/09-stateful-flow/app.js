@@ -7,7 +7,12 @@ Manten esta forma: const answer = `...`; module.exports = answer.trim();
 */
 const answer = `
 flowchart TD
-    A[start] --> B[end]
+    A("Inicio") --> B["Bloqueado"]
+    B["Bloqueado"] -->|"Moneda"| C["Desbloqueado"]
+    C["Desbloqueado"] -->|"Empujar"| D["La persona pasa"]
+    D["La persona pasa"] --> B["Bloqueado"]
+    B["Bloqueado"] -->|"No hay mas eventos"| E("End")
+
 `;
 
 module.exports = answer.trim();

@@ -14,7 +14,11 @@ Mantén este formato:
 
 const answer = `
 flowchart TD
-    A[start] --> B[end]
+    A("Start") --> B["Hervir el agua"]
+    B["Hervir el agua"] --> C["Preparar el cafe"]
+    C["Preparar el cafe"] --> D["Servir el cafe"]
+    D["Servir el cafe"] --> E("End")
+
 `;
 
 module.exports = answer.trim();
